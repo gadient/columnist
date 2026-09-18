@@ -1,0 +1,30 @@
+fastapi==0.141.1
+# Pinned explicitly: fastapi only requires starlette>=0.46, which admits versions with published
+# advisories (multipart/form DoS among them). 1.6.0 clears every one pip-audit knows of.
+starlette==1.6.0
+uvicorn[standard]==0.35.0
+pydantic-settings==2.10.1
+mcp==1.30.0
+# Postgres driver for a Postgres (e.g. RDS) deployment; unused when DATABASE_URL is empty (local SQLite).
+psycopg[binary]==3.3.4
+# Auth (Cognito BFF). JWT verification + Cognito admin API. Only needed once Cognito is configured.
+PyJWT[crypto]==2.13.0
+# boto3: Cognito-idp admin API (cognito_auth.py) + Bedrock Converse extraction (note_imports/provider.py).
+# Pinned at 1.43.50: the floor for the optional `json_schema` structured-outputs strategy in the
+# note-import extractor (Converse `outputConfig.textFormat`). The shipped default is the `tool`
+# strategy (`bedrock_structured_output = "tool"`), which needs no such floor. When raising this pin,
+# verify a live Cognito login — the cognito-idp admin calls are the other consumer.
+boto3==1.43.50
+certifi==2026.6.17   # pinned CA bundle for JWKS TLS verification (deterministic across hosts)
+# Notes-to-Cards DOCX ingestion. python-docx reads paragraphs/tables; the container
+# integrity, encryption, macro and tracked-change checks are done against the raw OOXML via
+# zipfile + lxml, which python-docx does not expose. lxml ships as a python-docx dependency.
+python-docx==1.1.2
+# Multipart form parsing for the note-import upload. Declared directly rather than relied
+# on as a transitive dependency of `mcp`, so an unrelated mcp upgrade can't silently break uploads.
+python-multipart==0.0.32
+# Model SDKs for `AGENT_BACKEND=openai` and `AGENT_BACKEND=anthropic` (both agents; lazy imports, so
+# neither loads on another backend). Declared so a clean install can run every backend
+# `.env.example` documents without an ImportError.
+openai==2.45.0
+anthropic==1.5.0

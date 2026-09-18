@@ -1,0 +1,29 @@
+node_modules/
+dist/
+
+data/*.sqlite
+data/*.sqlite-*
+data/logs/
+data/runtime/
+# Eval output — holds board titles, card names and model answers. Local evidence, not an artifact
+# worth versioning; re-runnable with scripts/agent-tool-eval.sh.
+data/agent-tool-eval-*.json
+
+.DS_Store
+.vscode/
+.env
+.env.*
+!backend/.env.example
+deploy/deploy.env
+*.log
+
+backend/.venv/
+__pycache__/
+*.pyc
+.claude/settings.local.json
+
+# Corpus-eval model-response cache (avoids re-spend; regenerable)
+agent_test_suite/.corpus-cache/
+
+# Bedrock probe throwaway venv (scripts/bedrock-probe.sh)
+scripts/.bedrock-probe-venv/

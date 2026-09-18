@@ -1,0 +1,16 @@
+Columnist
+Copyright 2026 The Columnist Authors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party dependencies are not bundled in this repository; they are installed from
+backend/requirements.txt and package.json under their own licences. Most are MIT, BSD, ISC or
+Apache-2.0. Notable exceptions:
+
+- psycopg / psycopg-binary: LGPL-3.0-only. Imported only when DATABASE_URL is set (PostgreSQL);
+  the default SQLite setup never loads it.
+- certifi: MPL-2.0.
+- tqdm: MPL-2.0 AND MIT (a dependency of openai, pulled in when AGENT_BACKEND=openai).
+- dompurify (via mermaid): MPL-2.0 OR Apache-2.0, used here under Apache-2.0.
+- robust-predicates (via mermaid): Unlicense.
+- caniuse-lite (via autoprefixer): CC-BY-4.0. Build-time only; not shipped in the app bundle.

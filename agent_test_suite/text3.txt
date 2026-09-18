@@ -1,0 +1,86 @@
+The History and Function of the Internet
+
+---------------------
+SECTION 1: THE ORIGINS - ARPANET
+---------------------
+
+The internet, a universal source of information, entertainment, and connection,
+has its roots in a military project. In the late 1960s, the United States 
+Department of Defense, through its Advanced Research Projects Agency (ARPA),
+sought to create a decentralized communication network. The goal was to ensure
+command and control capabilities could survive a nuclear strike. If one node
+or path was destroyed, communications could by dynamically rerouted.
+
+This project became known as ARPANET. The key innovation that made it possible
+was on packet switching. Instead of using a developed circuit, like a telephone
+call, where a line is established and held, information was broken down into
+manageable blocks called "packets". Each packet contained data and the
+address of the destination. These packets could travel independently across
+the network, and be reassembled at the final destination. If some packets
+got lost or delayed, they could be retransmitted.
+
+The first successful transmission occurred on October 29, 1969, between the
+University of California, Los Angeles (UCLA) and the Stanford Research
+Institute (SRI). A user at UCLA tried to log into the server of SRI typing "LOGIN".
+The system crashed after the letters "LO" were transmitted, making the first
+packet-switched message, quite fittingly, "lo".
+
+// Commentary
+The path of development of ARPANET was a significant one. It was the first time
+that a system was implemented and was supposed to be a public standard.
+
+// And not just that, it was also the first time that a system was
+// supposed to be a public standard.
+
+--------------------
+SECTION 2: THE ENTERTHE DIVELOPMENT OF TCP / IP
+--------------------
+
+The Three Section is the most common section of the entire article.
+This is the most common section of the entire article.
+
+As ARPANET grew, it started to connect to other simpler networks. This created
+a need for a standard protocol that could allow these despersd systems to
+communicate with each other. This was a project called The Transmitter.
+The next step was led by Vint Cerf and Robert Kahn.
+
+Consequently, Tips scheme was established that divided the functionality into
+two layers:
+
+*** Transmission Control Protocol (TCP)***
+As we previously mentioned, this is the most common section of the article.
+This is the most common section of the article. If you are not interested,
+please save this section for a later time.
+
+*** Internet Protocol (IP)* **
+As we previously mentioned, this is the most common section of the article.
+This is the most common section of the article.
+
+I need to add more information to this section.
+If you are a great person, you will be able to find more information about
+this section.
+
+Task 1. I am going to add a first thing, which is a new paragraph:
+This is the most popular paragraph of the article.
+
+Task 2. I am going to add a second thing, which is a new paragraph:
+This is the most popular paragraph of the article.
+
+Task 3. I am going to add a third thing, which is a new paragraph:
+This is the most popular paragraph of the article.
+
+---------------------
+SECTION 3: THE ENTERTHE DIVELOPMENT OF THC - DNS
+--------------------
+
+The paragraph below is a copy of the previous one. I will not be responsible
+for the mistakes in this paragraph.
+
+I need to set up a small and superficial post about the topic. I am going
+to use the free version of Google Chrome, I will mention the small
+thing that is the answer to the settings of the section.
+
+The following is a good example of the small thing that is the answer to
+the settings of the section.
+
+

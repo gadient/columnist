@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(git rev-parse --show-toplevel)"
+cd "$ROOT_DIR"
+
+# Block hardcoded absolute user home paths (/Users/<name>/... or /home/<name>/...)
+echo "[pre-commit] Checking for hardcoded user paths..."
+HARDCODED=$(git diff --cached --unified=0 \
+  | grep '^+' \
+  | grep -v '^+++' \
+  | grep -E '/Users/[A-Za-z0-9._-]+/|/home/[A-Za-z0-9._-]+/' \
+  || true)
+if [[ -n "$HARDCODED" ]]; then
+  echo "[pre-commit] ERROR: Hardcoded absolute user paths found in staged changes:"
+  echo "$HARDCODED" | sed 's/^+/  /'
+  echo ""
+  echo "  Replace with relative paths or environment variables, then re-stage."
+  exit 1
+fi
+echo "[pre-commit] No hardcoded user paths found."
+
+if [[ "${SKIP_GITLEAKS:-}" == "1" ]]; then
+  echo "[pre-commit] SKIP_GITLEAKS=1 set; skipping gitleaks check."
+  exit 0
+fi
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  cat <<'MSG'
+[pre-commit] gitleaks is required but not installed.
+Install with one of:
+  brew install gitleaks
+  go install github.com/gitleaks/gitleaks/v8@latest
+Then re-run your commit.
+MSG
+  exit 1
+fi
+
+ARGS=(--redact)
+if [[ -f ".gitleaks.toml" ]]; then
+  ARGS+=(--config .gitleaks.toml)
+fi
+
+echo "[pre-commit] Running gitleaks on staged changes..."
+if gitleaks --help 2>&1 | grep -qE '(^|[[:space:]])protect([[:space:]]|$)'; then
+  gitleaks protect --staged "${ARGS[@]}"
+elif gitleaks --help 2>&1 | grep -qE '(^|[[:space:]])git([[:space:]]|$)'; then
+  gitleaks git --staged "${ARGS[@]}"
+else
+  echo "[pre-commit] Unable to determine supported gitleaks command (protect/git)."
+  exit 1
+fi

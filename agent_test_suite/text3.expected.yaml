@@ -1,0 +1,24 @@
+# Labels for text3.txt — a prose essay on the history of the internet (negative).
+# The correct answer is ZERO cards. This is the most valuable kind of negative: it contains
+# explicit "Task 1 / Task 2 / Task 3" bait that is actually the essayist narrating their own
+# writing ("I am going to add a first thing, which is a new paragraph") — no owner, no deliverable,
+# no board. An agent that invents work to look useful bites here. Matching is by anchor as always;
+# for a negative the gate is simply that no card survives (precision 1.0 on 0 proposals + max_cards).
+note: text3.txt
+meeting_date: 2025-01-01
+
+expected: []
+
+# Traps: not required to catch a failure (max_cards:0 already does), but they make a bite legible as
+# FORBIDDEN with a reason rather than a generic spurious card.
+forbidden:
+  - id: essay-task-bait
+    reason: 'the "Task N ... add a paragraph" narration is prose, not an action item'
+    match: { text_any: ["add a first thing", "add a second thing", "add a third thing",
+                         "new paragraph", "most popular paragraph"] }
+  - id: chrome-post-bait
+    reason: 'the "set up a small and superficial post" line is the author musing, not a deliverable'
+    match: { text_any: ["set up a small", "superficial post", "free version of google chrome"] }
+
+invariants:
+  max_cards: 0

@@ -1,0 +1,21 @@
+-- Server-authoritative board version.
+--
+-- Original rationale (as of this migration): the board had no trustworthy version, and
+-- `updated_at` could not serve as one — it was whole-second resolution (two writes in the same
+-- second were indistinguishable) and the snapshot path took its value from the CLIENT, so a guard
+-- keyed on it would have compared against a number the stale client itself dictated.
+--
+-- Why it matters: `sync_board_snapshot` DELETEs every card/member/column for a board and
+-- re-inserts from the client's snapshot. A card created server-side (e.g. by the Notes-to-Cards
+-- apply path) is invisible to that client, so its next snapshot write would permanently DELETE
+-- the card. This column is the base for the optimistic-concurrency guard that turns that silent
+-- data loss into a visible, recoverable 409. Each import session also records the board
+-- version at analysis time.
+--
+-- Contract: incremented server-side on EVERY write to a board's snapshot state (title/description,
+-- columns, cards, members); never accepted from the client.
+-- Both write paths must bump it — `_touch_board` AND `sync_board_snapshot`, which bypasses
+-- `_touch_board` and writes `version` and `updated_at` directly. Missing either leaves a hole
+-- exactly where the risk lives.
+
+ALTER TABLE boards ADD COLUMN version INTEGER NOT NULL DEFAULT 0;

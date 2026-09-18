@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Semantic theme tokens.
+ * Values are space-separated RGB channels so Tailwind's `<alpha-value>` opacity
+ * modifiers keep working (see tailwind.config.js). Light is the default in :root;
+ * `:root[data-theme="dark"]` overrides for dark mode. The <html> data-theme
+ * attribute is set by ThemeContext.
+ *
+ * Do NOT reintroduce hard-coded bg-gray-900 / text-white etc. — use the semantic
+ * utilities (bg-surface, text-muted, border-default, …) so both themes flip together.
+ */
+:root {
+  --bg: 249 250 251;            /* app background        (gray-50)  */
+  --surface: 255 255 255;       /* cards / panels        (white)    */
+  --surface-raised: 255 255 255;/* raised / hover        (white)    */
+  --surface-sunken: 243 244 246;/* inputs / wells        (gray-100) */
+  --border-default: 229 231 235;/* hairline borders      (gray-200) */
+  --border-strong: 209 213 219; /* stronger borders      (gray-300) */
+  --text: 17 24 39;             /* primary text          (gray-900) */
+  --text-muted: 107 114 128;    /* secondary text        (gray-500) */
+  --text-subtle: 156 163 175;   /* tertiary / disabled   (gray-400) */
+  --text-inverted: 255 255 255; /* text on accent fills  (white)    */
+  --accent: 37 99 235;          /* brand blue            (blue-600) */
+  --accent-hover: 29 78 216;    /* brand blue hover      (blue-700) */
+  --nav-bg: 255 255 255;        /* global nav background            */
+  --nav-border: 229 231 235;    /* global nav border                */
+}
+
+:root[data-theme="dark"] {
+  --bg: 17 24 39;               /* gray-900 */
+  --surface: 31 41 55;          /* gray-800 */
+  --surface-raised: 55 65 81;   /* gray-700 */
+  --surface-sunken: 17 24 39;   /* gray-900 */
+  --border-default: 55 65 81;   /* gray-700 */
+  --border-strong: 75 85 99;    /* gray-600 */
+  --text: 249 250 251;          /* gray-50  */
+  --text-muted: 156 163 175;    /* gray-400 */
+  --text-subtle: 107 114 128;   /* gray-500 */
+  --text-inverted: 255 255 255;
+  --accent: 59 130 246;         /* blue-500 (slightly brighter on dark) */
+  --accent-hover: 96 165 250;   /* blue-400 */
+  --nav-bg: 31 41 55;           /* gray-800 */
+  --nav-border: 55 65 81;       /* gray-700 */
+}
+
+/* ── Rendered project docs (About page) ──────────────────────────────────────
+   Styles the Markdown that AboutModal renders from the docs, using the theme
+   tokens above so it works in light and dark. */
+.doc-prose { color: rgb(var(--text)); font-size: 15px; line-height: 1.65; }
+.doc-prose > :first-child { margin-top: 0; }
+.doc-prose h1 { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 1rem; }
+.doc-prose h2 { font-size: 1.4rem; font-weight: 700; margin: 2rem 0 0.75rem; padding-bottom: 0.35rem; border-bottom: 1px solid rgb(var(--border-default)); }
+.doc-prose h3 { font-size: 1.12rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+.doc-prose h4 { font-weight: 700; margin: 1.2rem 0 0.4rem; }
+.doc-prose p { margin: 0 0 0.9rem; }
+.doc-prose a { color: rgb(var(--accent)); text-decoration: underline; text-underline-offset: 2px; }
+.doc-prose ul, .doc-prose ol { margin: 0 0 0.9rem; padding-left: 1.4rem; }
+.doc-prose li { margin: 0.2rem 0; }
+.doc-prose li > ul, .doc-prose li > ol { margin: 0.2rem 0; }
+.doc-prose strong { font-weight: 700; }
+.doc-prose em { font-style: italic; }
+.doc-prose hr { border: 0; border-top: 1px solid rgb(var(--border-default)); margin: 2rem 0; }
+.doc-prose blockquote { margin: 0 0 1rem; padding: 0.6rem 1rem; border-left: 3px solid rgb(var(--accent)); background: rgb(var(--surface-sunken)); border-radius: 0 6px 6px 0; color: rgb(var(--text-muted)); }
+.doc-prose blockquote p { margin: 0.3rem 0; }
+.doc-prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.86em; background: rgb(var(--surface-sunken)); border: 1px solid rgb(var(--border-default)); padding: 0.08em 0.36em; border-radius: 5px; }
+.doc-prose pre { background: rgb(var(--surface-sunken)); border: 1px solid rgb(var(--border-default)); border-radius: 8px; padding: 0.9rem 1rem; overflow-x: auto; margin: 0 0 1rem; }
+.doc-prose pre code { background: none; border: 0; padding: 0; font-size: 0.82rem; white-space: pre; }
+.doc-prose table { border-collapse: collapse; width: 100%; margin: 0 0 1.2rem; font-size: 0.92em; display: block; overflow-x: auto; }
+.doc-prose th, .doc-prose td { border: 1px solid rgb(var(--border-default)); padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
+.doc-prose thead th { background: rgb(var(--surface-sunken)); font-weight: 700; white-space: nowrap; }
+.doc-prose img { max-width: 100%; }
+.doc-mermaid { display: flex; justify-content: center; margin: 1rem 0 1.5rem; overflow-x: auto; }
+.doc-mermaid svg { max-width: 100%; height: auto; }

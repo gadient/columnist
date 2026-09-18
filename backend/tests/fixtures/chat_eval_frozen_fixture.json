@@ -1,0 +1,1052 @@
+{
+  "anchor": "2026-07-20",
+  "boards": [
+    {
+      "board": "Engineering",
+      "cards": {
+        "card_board_c11926c825dd_0": {
+          "id": "card_board_c11926c825dd_0",
+          "title": "Refactor auth middleware",
+          "description": "Extract JWT validation into a reusable service",
+          "priority": "high",
+          "dueDate": "2026-07-29",
+          "assignees": [
+            "member_55f07a01a9d6"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "backend",
+            "security"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c11926c825dd_1": {
+          "id": "card_board_c11926c825dd_1",
+          "title": "Add Redis caching layer",
+          "description": "Cache API responses to reduce database load",
+          "priority": "medium",
+          "dueDate": "2026-08-08",
+          "assignees": [
+            "member_07870b3bcaf3"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 5,
+          "labels": [
+            "backend",
+            "performance"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c11926c825dd_2": {
+          "id": "card_board_c11926c825dd_2",
+          "title": "Fix race condition in job queue",
+          "description": "Concurrent dispatch causing duplicate processing",
+          "priority": "high",
+          "dueDate": "2026-07-18",
+          "assignees": [
+            "member_24d48c3dc1df"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 13,
+          "labels": [
+            "bug",
+            "backend"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c11926c825dd_3": {
+          "id": "card_board_c11926c825dd_3",
+          "title": "Upgrade Node.js to v22",
+          "description": "Update runtime for LTS and performance gains",
+          "priority": "low",
+          "dueDate": "2026-08-17",
+          "assignees": [
+            "member_c8344e56844d"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 2,
+          "labels": [
+            "devops"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c11926c825dd_4": {
+          "id": "card_board_c11926c825dd_4",
+          "title": "Unit tests for billing service",
+          "description": "Target 80% coverage on payment flows",
+          "priority": "medium",
+          "dueDate": "2026-07-21",
+          "assignees": [
+            "member_55f07a01a9d6",
+            "member_07870b3bcaf3"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 5,
+          "labels": [
+            "testing",
+            "billing"
+          ],
+          "blockedBy": [
+            "card_board_c11926c825dd_0"
+          ],
+          "dependsOn": []
+        },
+        "card_board_c11926c825dd_5": {
+          "id": "card_board_c11926c825dd_5",
+          "title": "Database index optimisation",
+          "description": "Missing indexes found on orders table via query plan analysis",
+          "priority": "medium",
+          "dueDate": "2026-07-22",
+          "assignees": [
+            "member_24d48c3dc1df"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": true,
+          "storyPoints": 3,
+          "labels": [
+            "database",
+            "performance"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        }
+      }
+    },
+    {
+      "board": "Engineering × PM",
+      "cards": {
+        "card_board_47e1205bb494_0": {
+          "id": "card_board_47e1205bb494_0",
+          "title": "Dark mode support",
+          "description": "System-level and manual theme switching",
+          "priority": "medium",
+          "dueDate": "2026-08-06",
+          "assignees": [
+            "member_312775ab5a3d"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "frontend",
+            "ui"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_47e1205bb494_1": {
+          "id": "card_board_47e1205bb494_1",
+          "title": "CSV export for reports",
+          "description": "Allow users to download filtered report data",
+          "priority": "high",
+          "dueDate": "2026-07-30",
+          "assignees": [
+            "member_551a5b15848f"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 5,
+          "labels": [
+            "data",
+            "reporting"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_47e1205bb494_2": {
+          "id": "card_board_47e1205bb494_2",
+          "title": "Two-factor authentication",
+          "description": "TOTP and SMS-based 2FA options",
+          "priority": "high",
+          "dueDate": "2026-08-12",
+          "assignees": [
+            "member_7206c666ef75",
+            "member_312775ab5a3d"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 13,
+          "labels": [
+            "security",
+            "auth"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_47e1205bb494_3": {
+          "id": "card_board_47e1205bb494_3",
+          "title": "Mobile responsive dashboard",
+          "description": "Optimise all views for 375px screens",
+          "priority": "medium",
+          "dueDate": "2026-08-22",
+          "assignees": [
+            "member_551a5b15848f"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "frontend",
+            "mobile"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_47e1205bb494_4": {
+          "id": "card_board_47e1205bb494_4",
+          "title": "Bulk card operations",
+          "description": "Select-all and batch move/delete for cards",
+          "priority": "low",
+          "dueDate": "2026-07-17",
+          "assignees": [
+            "member_7206c666ef75"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": true,
+          "storyPoints": 3,
+          "labels": [
+            "frontend"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        }
+      }
+    },
+    {
+      "board": "PM × Sales",
+      "cards": {
+        "card_board_3013baa655b6_0": {
+          "id": "card_board_3013baa655b6_0",
+          "title": "CRM integration",
+          "description": "Bi-directional sync of contacts, deals, and tasks",
+          "priority": "high",
+          "dueDate": "2026-08-08",
+          "assignees": [
+            "member_cde0a2bfadd8"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 13,
+          "labels": [
+            "integration",
+            "crm"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_3013baa655b6_1": {
+          "id": "card_board_3013baa655b6_1",
+          "title": "Custom pricing tier builder",
+          "description": "Self-serve UI for enterprise pricing configuration",
+          "priority": "high",
+          "dueDate": "2026-08-27",
+          "assignees": [
+            "member_a4da4a0e5cd7"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "billing",
+            "enterprise"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_3013baa655b6_2": {
+          "id": "card_board_3013baa655b6_2",
+          "title": "White-label branding",
+          "description": "Custom logos, colours, and domain for enterprise clients",
+          "priority": "medium",
+          "dueDate": "2026-08-17",
+          "assignees": [
+            "member_b9b25f604cbd"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 5,
+          "labels": [
+            "enterprise",
+            "ui"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_3013baa655b6_3": {
+          "id": "card_board_3013baa655b6_3",
+          "title": "Usage analytics dashboard",
+          "description": "Per-seat and per-feature usage metrics for admins",
+          "priority": "medium",
+          "dueDate": "2026-07-19",
+          "assignees": [
+            "member_a4da4a0e5cd7",
+            "member_cde0a2bfadd8"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": true,
+          "storyPoints": 8,
+          "labels": [
+            "analytics",
+            "admin"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_3013baa655b6_4": {
+          "id": "card_board_3013baa655b6_4",
+          "title": "API rate limit increase",
+          "description": "Raise default limits for enterprise plan customers",
+          "priority": "low",
+          "dueDate": "2026-09-07",
+          "assignees": [
+            "member_b9b25f604cbd"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 2,
+          "labels": [
+            "api",
+            "enterprise"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        }
+      }
+    },
+    {
+      "board": "PM × Legal",
+      "cards": {
+        "card_board_2c80cca4a9a7_0": {
+          "id": "card_board_2c80cca4a9a7_0",
+          "title": "GDPR data retention policy",
+          "description": "Auto-delete inactive accounts after 24 months",
+          "priority": "high",
+          "dueDate": "2026-08-01",
+          "assignees": [
+            "member_46399fa4edc4"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "gdpr",
+            "compliance",
+            "data"
+          ],
+          "blockedBy": [
+            "card_board_2c80cca4a9a7_1"
+          ],
+          "dependsOn": []
+        },
+        "card_board_2c80cca4a9a7_1": {
+          "id": "card_board_2c80cca4a9a7_1",
+          "title": "Terms of Service update",
+          "description": "Reflect new SaaS data processing addendum",
+          "priority": "high",
+          "dueDate": "2026-07-19",
+          "assignees": [
+            "member_ce64fa188c3d"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 3,
+          "labels": [
+            "legal",
+            "tos"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_2c80cca4a9a7_2": {
+          "id": "card_board_2c80cca4a9a7_2",
+          "title": "SOC 2 Type II audit prep",
+          "description": "Evidence collection and gap remediation for annual audit",
+          "priority": "high",
+          "dueDate": "2026-09-06",
+          "assignees": [
+            "member_be4c4ce1f2fd"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 13,
+          "labels": [
+            "compliance",
+            "audit"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_2c80cca4a9a7_3": {
+          "id": "card_board_2c80cca4a9a7_3",
+          "title": "Cookie consent banner",
+          "description": "PECR-compliant opt-in/opt-out flow",
+          "priority": "medium",
+          "dueDate": "2026-07-15",
+          "assignees": [
+            "member_46399fa4edc4"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": true,
+          "storyPoints": 5,
+          "labels": [
+            "gdpr",
+            "frontend"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_2c80cca4a9a7_4": {
+          "id": "card_board_2c80cca4a9a7_4",
+          "title": "CCPA compliance review",
+          "description": "Data mapping and \"do not sell\" request flow",
+          "priority": "medium",
+          "dueDate": "2026-08-22",
+          "assignees": [
+            "member_ce64fa188c3d",
+            "member_be4c4ce1f2fd"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "ccpa",
+            "compliance"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        }
+      }
+    },
+    {
+      "board": "PM × Marketing",
+      "cards": {
+        "card_board_0f9eb381422a_0": {
+          "id": "card_board_0f9eb381422a_0",
+          "title": "Redesign pricing page",
+          "description": "A/B test new feature-comparison layout",
+          "priority": "high",
+          "dueDate": "2026-08-01",
+          "assignees": [
+            "member_49bab3bb051f"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 5,
+          "labels": [
+            "web",
+            "conversion"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_0f9eb381422a_1": {
+          "id": "card_board_0f9eb381422a_1",
+          "title": "Case study: Acme Corp",
+          "description": "2× ARR growth story with quotes and metrics",
+          "priority": "medium",
+          "dueDate": "2026-08-12",
+          "assignees": [
+            "member_7f91e4d9db76"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 3,
+          "labels": [
+            "content",
+            "customers"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_0f9eb381422a_2": {
+          "id": "card_board_0f9eb381422a_2",
+          "title": "Product launch webinar",
+          "description": "Live demo and Q&A for Q2 feature release",
+          "priority": "high",
+          "dueDate": "2026-07-22",
+          "assignees": [
+            "member_60d17fdef5e0"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": true,
+          "storyPoints": 5,
+          "labels": [
+            "events",
+            "launch"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_0f9eb381422a_3": {
+          "id": "card_board_0f9eb381422a_3",
+          "title": "Feature announcement email",
+          "description": "3-email drip for new board analytics feature",
+          "priority": "medium",
+          "dueDate": "2026-08-06",
+          "assignees": [
+            "member_7f91e4d9db76",
+            "member_60d17fdef5e0"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 2,
+          "labels": [
+            "email",
+            "launch"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_0f9eb381422a_4": {
+          "id": "card_board_0f9eb381422a_4",
+          "title": "In-app onboarding tour",
+          "description": "Interactive walkthrough for new user activation",
+          "priority": "medium",
+          "dueDate": "2026-08-27",
+          "assignees": [
+            "member_49bab3bb051f"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "onboarding",
+            "ux"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        }
+      }
+    },
+    {
+      "board": "PM × PM",
+      "cards": {
+        "card_board_c87a57608e30_0": {
+          "id": "card_board_c87a57608e30_0",
+          "title": "Q3 roadmap prioritisation",
+          "description": "Force-rank top 15 features with stakeholder input",
+          "priority": "high",
+          "dueDate": "2026-07-29",
+          "assignees": [
+            "member_6caab0390f20",
+            "member_6e6eb73bf065"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 5,
+          "labels": [
+            "planning",
+            "roadmap"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c87a57608e30_1": {
+          "id": "card_board_c87a57608e30_1",
+          "title": "Stakeholder alignment session",
+          "description": "Monthly all-hands product review with GTM leads",
+          "priority": "medium",
+          "dueDate": "2026-07-27",
+          "assignees": [
+            "member_d3655df38d34"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 2,
+          "labels": [
+            "planning"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c87a57608e30_2": {
+          "id": "card_board_c87a57608e30_2",
+          "title": "Customer feedback synthesis",
+          "description": "Cluster last 90 days of NPS verbatims by theme",
+          "priority": "medium",
+          "dueDate": "2026-08-03",
+          "assignees": [
+            "member_6e6eb73bf065"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 3,
+          "labels": [
+            "research",
+            "data"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c87a57608e30_3": {
+          "id": "card_board_c87a57608e30_3",
+          "title": "Product metrics review",
+          "description": "WAU, feature adoption, retention cohorts",
+          "priority": "low",
+          "dueDate": "2026-08-08",
+          "assignees": [
+            "member_6caab0390f20"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 2,
+          "labels": [
+            "analytics"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c87a57608e30_4": {
+          "id": "card_board_c87a57608e30_4",
+          "title": "OKR mid-quarter check-in",
+          "description": "Progress review and re-forecast for Q2 OKRs",
+          "priority": "high",
+          "dueDate": "2026-07-21",
+          "assignees": [
+            "member_d3655df38d34"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": true,
+          "storyPoints": 3,
+          "labels": [
+            "okr",
+            "planning"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        }
+      }
+    },
+    {
+      "board": "Sales Pipeline",
+      "cards": {
+        "card_board_32efe1879246_0": {
+          "id": "card_board_32efe1879246_0",
+          "title": "TechCorp Enterprise — $240k",
+          "description": "Final legal review; procurement sign-off pending",
+          "priority": "high",
+          "dueDate": "2026-08-04",
+          "assignees": [
+            "member_9a414ea9b818"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 5,
+          "labels": [
+            "enterprise",
+            "legal-hold"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_32efe1879246_1": {
+          "id": "card_board_32efe1879246_1",
+          "title": "Zenith Labs pilot — $28k",
+          "description": "Send revised proposal after discovery call",
+          "priority": "medium",
+          "dueDate": "2026-08-12",
+          "assignees": [
+            "member_39c6e79b5581"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 3,
+          "labels": [
+            "smb"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_32efe1879246_2": {
+          "id": "card_board_32efe1879246_2",
+          "title": "GlobeX initial outreach",
+          "description": "Warm intro via a mutual contact; schedule first call",
+          "priority": "low",
+          "dueDate": "2026-07-28",
+          "assignees": [
+            "member_d351ce40f2cc"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 1,
+          "labels": [
+            "outbound"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_32efe1879246_3": {
+          "id": "card_board_32efe1879246_3",
+          "title": "Apex Inc renewal — $96k",
+          "description": "Upsell to growth plan with SSO add-on",
+          "priority": "high",
+          "dueDate": "2026-07-17",
+          "assignees": [
+            "member_9a414ea9b818",
+            "member_39c6e79b5581"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": true,
+          "storyPoints": 5,
+          "labels": [
+            "renewal",
+            "enterprise"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_32efe1879246_4": {
+          "id": "card_board_32efe1879246_4",
+          "title": "Meridian startup package — $12k",
+          "description": "Respond to security questionnaire",
+          "priority": "medium",
+          "dueDate": "2026-08-19",
+          "assignees": [
+            "member_d351ce40f2cc"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 2,
+          "labels": [
+            "startup",
+            "security-review"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        }
+      }
+    },
+    {
+      "board": "Marketing Campaign",
+      "cards": {
+        "card_board_4747a5bef8df_0": {
+          "id": "card_board_4747a5bef8df_0",
+          "title": "Summer product launch campaign",
+          "description": "Multi-channel: email, social, paid ads, press",
+          "priority": "high",
+          "dueDate": "2026-08-08",
+          "assignees": [
+            "member_e24ab6cf8ecf",
+            "member_a14222de217c"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 13,
+          "labels": [
+            "launch",
+            "multi-channel"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_4747a5bef8df_1": {
+          "id": "card_board_4747a5bef8df_1",
+          "title": "Sponsored social posts — Q2",
+          "description": "4-post series targeting engineering managers",
+          "priority": "medium",
+          "dueDate": "2026-08-01",
+          "assignees": [
+            "member_4a77643375c5"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 3,
+          "labels": [
+            "social",
+            "paid"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_4747a5bef8df_2": {
+          "id": "card_board_4747a5bef8df_2",
+          "title": "Developer conference sponsorship",
+          "description": "Booth, swag, and talk submission for Kestrel DevCon 2026",
+          "priority": "high",
+          "dueDate": "2026-07-29",
+          "assignees": [
+            "member_a14222de217c"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "events",
+            "dev"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_4747a5bef8df_3": {
+          "id": "card_board_4747a5bef8df_3",
+          "title": "Email nurture sequence",
+          "description": "5-part onboarding drip for trial signups",
+          "priority": "medium",
+          "dueDate": "2026-07-19",
+          "assignees": [
+            "member_e24ab6cf8ecf"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": true,
+          "storyPoints": 5,
+          "labels": [
+            "email",
+            "onboarding"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_4747a5bef8df_4": {
+          "id": "card_board_4747a5bef8df_4",
+          "title": "SEO content sprint",
+          "description": "8 long-form posts targeting high-intent keywords",
+          "priority": "low",
+          "dueDate": "2026-08-27",
+          "assignees": [
+            "member_4a77643375c5"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "seo",
+            "content"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        }
+      }
+    },
+    {
+      "board": "Customer Success",
+      "cards": {
+        "card_board_c6e5c0551748_0": {
+          "id": "card_board_c6e5c0551748_0",
+          "title": "Acme Corp — onboarding week 2",
+          "description": "Complete data import and train 3 admin users",
+          "priority": "high",
+          "dueDate": "2026-07-21",
+          "assignees": [
+            "member_e156195dc762"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 5,
+          "labels": [
+            "onboarding",
+            "enterprise"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c6e5c0551748_1": {
+          "id": "card_board_c6e5c0551748_1",
+          "title": "GlobeX — health score drop",
+          "description": "DAU fell 40% — schedule exec call and remediation plan",
+          "priority": "high",
+          "dueDate": "2026-07-17",
+          "assignees": [
+            "member_f13056fd8752"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "at-risk",
+            "churn"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c6e5c0551748_2": {
+          "id": "card_board_c6e5c0551748_2",
+          "title": "Zenith Labs renewal",
+          "description": "Annual contract renewal — propose 2-year deal",
+          "priority": "medium",
+          "dueDate": "2026-08-08",
+          "assignees": [
+            "member_15d5c4d8a4f6"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 3,
+          "labels": [
+            "renewal"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c6e5c0551748_3": {
+          "id": "card_board_c6e5c0551748_3",
+          "title": "TechCorp quarterly business review",
+          "description": "Present ROI metrics and roadmap sneak peek",
+          "priority": "low",
+          "dueDate": "2026-08-17",
+          "assignees": [
+            "member_e156195dc762",
+            "member_f13056fd8752"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 2,
+          "labels": [
+            "qbr",
+            "enterprise"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_c6e5c0551748_4": {
+          "id": "card_board_c6e5c0551748_4",
+          "title": "Apex Inc success plan",
+          "description": "Define Q3 goals and adoption milestones",
+          "priority": "medium",
+          "dueDate": "2026-08-06",
+          "assignees": [
+            "member_15d5c4d8a4f6"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 3,
+          "labels": [
+            "success-plan"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        }
+      }
+    },
+    {
+      "board": "OKR & Strategy",
+      "cards": {
+        "card_board_47d1bb2b25fa_0": {
+          "id": "card_board_47d1bb2b25fa_0",
+          "title": "Reach $5M ARR by Q3",
+          "description": "Requires 22 new enterprise logos and 15% expansion from existing",
+          "priority": "high",
+          "dueDate": "2026-12-07",
+          "assignees": [
+            "member_8d78294edeb2",
+            "member_e3eea1a1166a"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 13,
+          "labels": [
+            "revenue",
+            "okr"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_47d1bb2b25fa_1": {
+          "id": "card_board_47d1bb2b25fa_1",
+          "title": "Launch enterprise tier",
+          "description": "SSO, audit logs, SLA, and dedicated CSM",
+          "priority": "high",
+          "dueDate": "2026-09-07",
+          "assignees": [
+            "member_e3eea1a1166a"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 21,
+          "labels": [
+            "enterprise",
+            "okr"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_47d1bb2b25fa_2": {
+          "id": "card_board_47d1bb2b25fa_2",
+          "title": "Reduce churn below 5%",
+          "description": "Invest in CS tooling, early-warning system, and playbooks",
+          "priority": "high",
+          "dueDate": "2026-12-07",
+          "assignees": [
+            "member_9c748f412933"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "retention",
+            "okr"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_47d1bb2b25fa_3": {
+          "id": "card_board_47d1bb2b25fa_3",
+          "title": "Grow engineering team to 25",
+          "description": "8 hires needed — sourcing in progress, 3 offers pending",
+          "priority": "medium",
+          "dueDate": "2026-10-08",
+          "assignees": [
+            "member_8d78294edeb2"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 5,
+          "labels": [
+            "hiring",
+            "okr"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_47d1bb2b25fa_4": {
+          "id": "card_board_47d1bb2b25fa_4",
+          "title": "Achieve NPS above 50",
+          "description": "Baseline 42 — improve via onboarding redesign",
+          "priority": "medium",
+          "dueDate": "2026-12-07",
+          "assignees": [
+            "member_e3eea1a1166a",
+            "member_9c748f412933"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 8,
+          "labels": [
+            "nps",
+            "okr"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        },
+        "card_board_47d1bb2b25fa_5": {
+          "id": "card_board_47d1bb2b25fa_5",
+          "title": "Expand to EU market",
+          "description": "GDPR compliance, EU hosting, and local GTM motion",
+          "priority": "high",
+          "dueDate": "2027-03-09",
+          "assignees": [
+            "member_e3eea1a1166a"
+          ],
+          "createdAt": "2026-07-20T00:00:00Z",
+          "completed": false,
+          "storyPoints": 21,
+          "labels": [
+            "expansion",
+            "okr",
+            "gdpr"
+          ],
+          "blockedBy": [],
+          "dependsOn": []
+        }
+      }
+    }
+  ]
+}
